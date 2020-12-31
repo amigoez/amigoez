@@ -2,12 +2,13 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: sans-serif;
   font-size: 100%;
 }
 
-.navbar {
+#navbar {
   width: 100%;
   height: 80px;
   background-color: rgb(20, 20, 20);
@@ -18,49 +19,44 @@ body {
   z-index: 100;
 }
 
-.navbar__logo {
+#navbar .navbar__logo {
   display: flex;
   align-items: center;
 }
 
-.navbar__logo img {
+#navbar img {
   width: 40px;
   padding: 15px;
 }
 
-.navbar__logo h1 {
+#navbar h1 {
   font-size: 2rem;
   color: white;
   cursor: pointer;
   font-family: sans-serif;
 }
 
-.navbar__items {
+#navbar ul {
 }
 
-.navbar__items ul {
+#navbar li {
   text-transform: uppercase;
-}
-
-.navbar__items li {
   display: inline-block;
   color: white;
   font-family: sans-serif;
   font-size: 1rem;
   margin: 0 15px;
   cursor: pointer;
-  
 }
 
-.navbar__items a {
+#navbar a {
   color: white;
   text-decoration: none;
   padding: 11px;
 }
 
-.navbar__items a:hover {
+#navbar li :hover {
   border: 1px solid white;
-  padding: 10px;
 }
 
 .menubar i {
@@ -72,28 +68,32 @@ body {
   display: none;
 }
 
-.banner {
+/* Banner*/
+
+#banner {
   width: 100%;
   height: 90vh;
   background-color: rgb(20, 20, 20);
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
-.banner div {
-  position: absolute;
-  top: 40%;
-  left: 30%;
-  transform: translate(-50%, -50%);
+#banner div {
+  position: relative;
+  margin-left: 50px;
 }
 
-.banner div h1 {
+#banner h1 {
   color: white;
   font-size: 5rem;
   font-family: "Jura", sans-serif;
   text-transform: uppercase;
   margin-left: 30px;
+  line-height: 8rem;
 }
 
-.banner div button {
+#banner button {
   width: 200px;
   height: 50px;
   border: none;
@@ -113,7 +113,7 @@ body {
   color: rgb(36, 36, 36);
 }
 
-.portfolio {
+#portfolio {
   width: 100%;
   background-color: rgb(194, 194, 194);
   text-align: center;
@@ -123,13 +123,14 @@ body {
   align-items: center;
   padding: 100px 0;
 }
-.portfolio h1 {
+
+#portfolio h1 {
   color: rgb(36, 36, 36);
   font-size: 3rem;
   margin-bottom: 20px;
 }
 
-.portfolio p {
+#portfolio p {
   color: rgb(36, 36, 36);
   width: 50%;
   max-width: 60%;
@@ -137,23 +138,18 @@ body {
   line-height: 1.8rem;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
+#gallery {
+}
+#gallery .grid {
+  display: grid;
+  grid-template-columns: auto auto;
 }
 
-/* Create four equal columns that sits next to each other */
-.column {
-  flex: 25%;
-  max-width: 25%;
-}
-
-.column img {
-  vertical-align: middle;
+#gallery img {
   width: 100%;
 }
 
-.about {
+#about {
   width: 100%;
   background-color: rgb(194, 194, 194);
   text-align: center;
@@ -163,25 +159,26 @@ body {
   align-items: center;
   padding: 100px 0;
 }
-.about h1 {
+
+#about h1 {
   color: rgb(36, 36, 36);
   font-size: 3rem;
   margin-bottom: 20px;
 }
 
-.about p {
+#about p {
   color: rgb(36, 36, 36);
   width: 50%;
   font-size: 1.3rem;
   line-height: 1.8rem;
 }
 
-.about button:hover {
+#about button:hover {
   background-color: rgba(255, 255, 255, 0);
   color: white;
 }
 
-.footer {
+#footer {
   width: 100%;
   background-color: #198cf7;
   display: flex;
@@ -192,7 +189,7 @@ body {
   flex-wrap: wrap;
 }
 
-.footer .contact_items {
+#footer .contact_items {
   display: flex;
   display: flex;
   flex-direction: column;
@@ -201,7 +198,7 @@ body {
   flex-wrap: wrap;
 }
 
-.footer .contact {
+#footer .contact {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -210,18 +207,18 @@ body {
   margin: 10px;
 }
 
-.footer .contact .contact_icons i {
+#footer .contact .contact_icons i {
   display: block;
   margin: 30px;
   font-size: 1.5rem;
 }
 
-.footer .contact .contact_text h1 {
+#footer .contact .contact_text h1 {
   margin: 30px;
   font-size: 1.5rem;
 }
 
-.footer .contact_items h1 {
+#footer .contact_items h1 {
   width: 40%;
   font-size: 2.8rem;
   color: white;
@@ -229,7 +226,7 @@ body {
   text-align: center;
 }
 
-.footer .contact_items h4 {
+#footer .contact_items h4 {
   width: 70%;
   font-size: 1.5rem;
   color: white;
@@ -239,11 +236,12 @@ body {
   line-height: 2rem;
 }
 
-.footer .contact_items ul {
+#footer .contact_items ul {
   color: white;
   list-style: none;
 }
-.footer .contact_items ul li {
+
+#footer .contact_items ul li {
   display: inline-block;
   color: white;
   list-style: none;
@@ -254,22 +252,22 @@ body {
   transition: 0.3s linear;
 }
 
-.footer .contact_items ul li:hover {
+#footer .contact_items ul li:hover {
   background-color: white;
   color: #d24d57;
   border: 2px solid white;
   cursor: pointer;
 }
 
-.footer .contact_items ul li a {
+#footer .contact_items ul li a {
   color: white;
 }
 
-.footer .contact_items ul li a:hover {
+#footer .contact_items ul li a:hover {
   color: #d24d57;
 }
 
-.footer .contact_items ul li i {
+#footer .contact_items ul li i {
   font-size: 1.4rem;
   position: relative;
   top: 50%;
@@ -277,11 +275,11 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.footer .subscribe {
+#footer .subscribe {
   margin: 30px;
 }
 
-.footer .subscribe input {
+#footer .subscribe input {
   width: 300px;
   height: 40px;
   border: none;
@@ -291,7 +289,7 @@ body {
   padding-left: 10px;
 }
 
-.footer .subscribe button {
+#footer .subscribe button {
   width: 100px;
   height: 40px;
   border: none;
@@ -302,131 +300,96 @@ body {
 }
 
 @media screen and (max-width: 952px) {
-  .navbar {
-    width: 100%;
+  #navbar {
     height: 60px;
   }
-
-  .navbar__logo {
+  #navbar .navbar__logo {
     width: 30px;
     padding: 10px;
     margin-right: 250px;
   }
-
-  .navbar__logo img {
+  #navbar img {
     width: 30px;
     padding: 10px;
   }
-
-  .navbar__logo h1 {
+  #navbar h1 {
     font-size: 1.5rem;
   }
-
   .navbar__items {
     position: absolute;
     width: 100%;
     height: 0vh;
-    background-color: black;
+    background-color: rgb(20, 20, 20);
     z-index: 100;
     transition: 0.3s linear;
   }
-
-  .navbar__items ul {
+  #navbar ul {
     position: absolute;
     display: flex;
     flex-direction: column;
     top: 50%;
-    left: 30%;
+    left: 25%;
     transform: translate(-50%);
     display: none;
     text-transform: uppercase;
     margin-top: 20px;
   }
-
-  .navbar__items li {
+  #navbar li {
     font-size: 1.3rem;
     margin-top: 60px;
   }
-
   .navbar__items li:hover {
     border: none;
   }
-
   .menubar i {
     color: white;
     font-size: 2rem;
     line-height: 100px;
     display: block;
   }
-
-  .banner {
+  #banner {
     width: 100%;
     height: 60vh;
   }
-
-  .banner div {
-    width: 100%;
-    position: absolute;
-    top: 26%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  #banner div {
+    margin-left: 0px;
   }
-
-  .banner div h1 {
-    font-size: 3rem;
+  #banner h1 {
+    font-size: 2.5rem;
+    line-height: 4rem;
   }
-
   .about p {
     width: 95%;
     line-height: 1.8rem;
   }
-
-  .row {
-    display: flex;
-    flex-wrap: wrap;
+  #gallery .grid {
+    grid-template-columns: auto;
   }
-
-  /* Create four equal columns that sits next to each other */
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-
-  .column img {
-    vertical-align: middle;
-    width: 100%;
-  }
-  .footer .contact .contact_icons i {
+  #footer .contact .contact_icons i {
     display: block;
     margin: 30px;
     font-size: 1.5rem;
   }
-
-  .footer .contact .contact_text h1 {
+  #footer .contact .contact_text h1 {
     margin: 30px;
     font-size: 1rem;
   }
-
-  .footer .contact_items h1 {
+  #footer .contact_items h1 {
     width: 85%;
     font-size: 2rem;
   }
-
-  .footer .contact_items ul li {
+  #footer .contact_items ul li {
     margin: 20px;
     width: 40px;
     height: 40px;
   }
-
-  .footer .contact_items ul li i {
+  #footer .contact_items ul li i {
     font-size: 1rem;
   }
-
-  .footer .subscribe input {
+  #footer .subscribe input {
     width: 200px;
   }
-
-  .footer .subscribe button {
+  #footer .subscribe button {
     width: 80px;
   }
 }
